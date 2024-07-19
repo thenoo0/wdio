@@ -1,3 +1,5 @@
+//npx wdio run ./wdio.conf.ts --spec test1.e2e.ts
+
 describe('Hello world',  () => {
     it('Lets visit google',async () => {
         const acceptCookiesButton = await $('#L2AGLb > div');
