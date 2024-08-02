@@ -4,6 +4,8 @@ import { expect } from '@wdio/globals'
 import LoginPage from '../pageobjects/login.page.js'
 import SecurePage from '../pageobjects/secure.page.js'
 import MenuPage from '../pageobjects/menu.page.js'
+import * as path from 'path';
+
 
 describe('My Login application', () => {
     it('should login with valid credentials', async () => {
@@ -17,7 +19,10 @@ describe('My Login application', () => {
     it('should click on menu', async () => {
         await MenuPage.open();
         await MenuPage.clickHomeButton();
+    })
 
+    it('should print current directory', async () => {
+        console.log('current path is: ' + path.resolve());
     })
 })
 
